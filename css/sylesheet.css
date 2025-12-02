@@ -1,4 +1,3 @@
-
         * {
             margin: 0;
             padding: 0;
@@ -11,7 +10,6 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
-            font-size: 15px;
             font-size: 1rem;
             line-height: 1.6;
             color: #4B4F58;
@@ -25,6 +23,15 @@
 
         a:hover {
             color: #3a3a3a;
+        }
+
+        .site-content {
+            max-width: 70%;
+            margin: auto;
+        }
+
+        .nav-link {
+            color: #ba0202;
         }
 
         .skip-link {
@@ -41,33 +48,23 @@
             top: 0;
         }
 
+        /* Header */
         .site-header {
             background: #ffffff;
-        }
-
-        /* Above Header */
-        .ast-above-header-bar {
-            background-color: #ffffff;
             border-bottom: 1px solid #eaeaea;
-            min-height: 30px;
+            margin-top: 1em;
         }
 
-        .site-above-header-wrap {
+        .header-wrap {
             max-width: 100%;
-            padding-left: 35px;
-            padding-right: 35px;
+            padding: 0 35px;
             margin: 0 auto;
         }
 
-        .ast-builder-grid-row {
+        .header-grid {
             display: flex;
             align-items: center;
             justify-content: space-between;
-        }
-
-        .site-header-above-section-left {
-            display: flex;
-            align-items: center;
         }
 
         /* Logo and Title */
@@ -83,9 +80,7 @@
         }
 
         .site-title {
-            font-size: 42px;
             font-size: 2.8rem;
-            font-weight: inherit;
             line-height: 1;
         }
 
@@ -94,76 +89,45 @@
         }
 
         .site-description {
-            font-size: 15px;
             font-size: 1rem;
             color: #3a3a3a;
             margin-top: 4px;
         }
 
         /* Social Icons */
-        .ast-header-social-1-wrap {
-            display: flex;
-            align-items: center;
+        .social-link {
+            margin: 0 8.5px;
         }
 
-        .ast-builder-social-element {
-            margin-left: 8.5px;
-            margin-right: 8.5px;
-        }
-
-        .ast-builder-social-element svg {
+        .social-link svg {
             width: 18px;
             height: 18px;
             fill: #557dbc;
         }
 
-        /* Navigation Menu */
-        .main-header-menu {
+        /* Navigation */
+        .main-menu {
             display: flex;
             list-style: none;
-            margin: 0;
-            padding: 0;
         }
 
-        .main-header-menu .menu-item {
-            display: flex;
-            align-items: center;
+        .main-menu li {
             line-height: 30px;
         }
 
-        .main-header-menu .menu-link {
+        .main-menu a {
             padding: 0 15px;
-            color: #3a3a3a;
             display: block;
         }
 
-        .main-header-menu .current-menu-item .menu-link {
-            font-weight: bold;
+        /* Hero Image */
+        .hero {
+            margin: 25px 25px 25px 60px;
+            background-color: #000;
+            filter: brightness(50%);
         }
 
-        /* Primary Header */
-        .ast-primary-header-bar {
-            background-color: #ffffff;
-            border-bottom: 0px solid #eaeaea;
-            min-height: 30px;
-        }
-
-        .site-primary-header-wrap {
-            max-width: 100%;
-            padding-left: 35px;
-            padding-right: 35px;
-            margin: 0 auto;
-        }
-
-        /* Header Widget with Cover Image */
-        .header-widget-area {
-            margin-top: 25px;
-            margin-bottom: 25px;
-            margin-left: 25px;
-            width: 100%;
-        }
-
-        .wp-block-cover {
+        .hero-cover {
             position: relative;
             min-height: 300px;
             display: flex;
@@ -171,10 +135,11 @@
             justify-content: center;
             background-size: cover;
             background-position: 52% 40%;
-            padding: var(--wp--preset--spacing--30);
+            padding: 30px;
         }
 
-        .wp-block-cover__background {
+        .hero-cover::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
@@ -183,7 +148,7 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
 
-        .wp-block-cover__image-background {
+        .hero-image {
             position: absolute;
             top: 0;
             left: 0;
@@ -193,17 +158,14 @@
             object-position: 52% 40%;
         }
 
-        .wp-block-cover__inner-container {
+        .hero-text {
             position: relative;
             z-index: 1;
             color: white;
-        }
-
-        .wp-block-cover h4 {
-            font-size: 36px;
-            font-size: 2.6666666666667rem;
-            color: white;
-            margin: 0;
+            font-size: 2rem;
+            margin: auto;
+            text-align: center;
+            filter: brightness(100%);
         }
 
         /* Main Content */
@@ -211,25 +173,16 @@
             padding: 60px 0;
         }
 
-        .ast-container {
+        .container {
             max-width: 1622px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .content-area {
-            width: 100%;
-        }
-
-        .entry-header {
-            margin-bottom: 2em;
-        }
-
         .entry-title {
-            font-size: 30px;
             font-size: 2rem;
             color: #3a3a3a;
-            margin-bottom: 0.5em;
+            margin-bottom: 1em;
         }
 
         .entry-content {
@@ -238,23 +191,6 @@
 
         .entry-content p {
             margin-bottom: 1.5em;
-        }
-
-        .entry-content h2,
-        .entry-content h3 {
-            color: #3a3a3a;
-            margin-top: 1.5em;
-            margin-bottom: 1em;
-        }
-
-        .entry-content h2 {
-            font-size: 30px;
-            font-size: 2rem;
-        }
-
-        .entry-content h3 {
-            font-size: 25px;
-            font-size: 1.6666666666667rem;
         }
 
         .entry-content hr {
@@ -272,21 +208,13 @@
 
         /* Footer */
         .site-footer {
+            position: absolute;
+            width: 100%;
+            left: 0;
             background-color: #eeeeee;
-            padding: 20px 0;
-            min-height: 80px;
-        }
-
-        .site-below-footer-wrap {
-            max-width: 1582px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .ast-footer-copyright {
+            padding: 20px;
             text-align: center;
-            font-size: 13px;
-            font-size: 0.86666666666667rem;
+            font-size: 0.87rem;
             color: #4B4F58;
         }
 
@@ -296,48 +224,25 @@
                 font-size: 85.5%;
             }
 
-            .site-title {
-                display: block;
+            .header-wrap {
+                padding: 0 20px;
             }
 
             .entry-title {
                 font-size: 30px;
             }
 
-            .wp-block-cover h4 {
+            .hero-text {
                 font-size: 30px;
-            }
-
-            .main-header-menu {
-                flex-direction: column;
-            }
-
-            .site-above-header-wrap,
-            .site-primary-header-wrap {
-                padding-left: 20px;
-                padding-right: 20px;
             }
         }
 
         @media (max-width: 544px) {
-            html {
-                font-size: 85.5%;
-            }
-
             .site-title {
                 display: none;
             }
 
-            .header-widget-area {
-                margin-left: 0;
-                margin-right: 0;
-            }
-
-            .entry-title {
-                font-size: 30px;
-            }
-
-            .wp-block-cover h4 {
-                font-size: 30px;
+            .hero {
+                margin: 25px 0;
             }
         }
